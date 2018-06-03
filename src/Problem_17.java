@@ -9,12 +9,12 @@
  * 115 = one hundred and fifteen 의 경우에는 20 글자가 됩니다.
  * */
 public class Problem_17 {
-	public static void main(String[] args)  throws java.lang.Exception {
+	/*public static void main(String[] args)  throws java.lang.Exception {
 		int allOfLength = 0;
 		Problem_17 p = new Problem_17();
 		allOfLength = p.caculate();
 		System.out.println("result is " + allOfLength);
-	}
+	}*/
 	
 	private int caculate() {
 		int result = 0;
