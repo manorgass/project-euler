@@ -9,33 +9,33 @@
  * 115 = one hundred and fifteen 의 경우에는 20 글자가 됩니다.
  * */
 public class Problem_17 {
-	/*public static void main(String[] args)  throws java.lang.Exception {
+	public void solution() {
 		int allOfLength = 0;
 		Problem_17 p = new Problem_17();
 		allOfLength = p.caculate();
 		System.out.println("result is " + allOfLength);
-	}*/
-	
+	}
+
 	private int caculate() {
 		int result = 0;
-		for(int i=1; i<1001; i++) {
+		for (int i = 1; i < 1001; i++) {
 			result += getLength(i);
 		}
-		
+
 		return result;
 	}
-	
+
 	private int getLength(int number) {
 		int length = 0;
-		
-		if(number == 1000)
-			return 11; //OneThousand
-		
-		int unit_hundred = number/100;
-		int remainder_hundred = number%100;
-		
-		if(unit_hundred != 0) {
-			switch(unit_hundred) {
+
+		if (number == 1000)
+			return 11; // OneThousand
+
+		int unit_hundred = number / 100;
+		int remainder_hundred = number % 100;
+
+		if (unit_hundred != 0) {
+			switch (unit_hundred) {
 			case 1: // one
 			case 2: // two
 			case 6: // six
@@ -53,12 +53,12 @@ public class Problem_17 {
 				break;
 			}
 			length += 7; // hundred
-			if(remainder_hundred != 0)
+			if (remainder_hundred != 0)
 				length += 3; // and
 		}
-		
-		if(remainder_hundred < 20) {
-			switch(remainder_hundred) {
+
+		if (remainder_hundred < 20) {
+			switch (remainder_hundred) {
 			case 1: // one
 			case 2: // two
 			case 6: // six
@@ -96,7 +96,7 @@ public class Problem_17 {
 		} else {
 			int unit_ten = remainder_hundred / 10;
 			int remainder_ten = remainder_hundred % 10;
-			switch(unit_ten) {
+			switch (unit_ten) {
 			case 4: // forty? fourty?
 			case 5:
 			case 6:
@@ -112,8 +112,8 @@ public class Problem_17 {
 				length += 7;
 				break;
 			}
-			
-			switch(remainder_ten) {
+
+			switch (remainder_ten) {
 			case 1: // one
 			case 2: // two
 			case 6: // six

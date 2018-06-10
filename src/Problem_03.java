@@ -1,7 +1,7 @@
 import java.math.*;
 
 public class Problem_03 {
-	public static void main(String[] args) throws java.lang.Exception {
+	public void solution() {
 		// TODO Auto-generated method stub
 		BigInteger x = new BigInteger("600851475143");
 
