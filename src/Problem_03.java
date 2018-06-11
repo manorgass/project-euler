@@ -1,32 +1,28 @@
-import java.math.*;
-
 public class Problem_03 {
 	public void solution() {
-		// TODO Auto-generated method stub
-		BigInteger x = new BigInteger("600851475143");
-
-		for (long i = 1; i < x.longValue(); i++) {
-			if (i > Long.MAX_VALUE) {
-				System.out.println("range over ;");
-				break;
-			}
-
-			/* 소수인지 판별 */
-			if (isSosu(i) && x.mod(BigInteger.valueOf(i)).equals(BigInteger.ZERO)) {
-				x = x.divide(BigInteger.valueOf(i));
+		long x = 600851475143L;
+	
+		/* 마지막 수가 소수가 아닌 경우 분해 작업을 반복. ex) 1029 */
+		while(!isSosu(x)) {
+			for (long i = 1; i < x; i++) {
+				/* i가 소수이며 해당 숫자와 나눠 떨어지는 경우 나눈값을 다시 저장 */
+				if (isSosu(i) && x % i == 0) {
+					x /= i;
+					System.out.println(i);
+				}
+					
 			}
 		}
-
-		System.out.println(x.longValue());
-
+		System.out.println("maximum value is " + x);
 	}
 
-	private static boolean isSosu(long x) {
+	/* 소수인경우 true를 리턴 */
+	private boolean isSosu(long x) {
 		boolean isSosu = true;
-
+	
 		if (x == 1 || x == 2)
 			return true;
-
+	
 		for (long i = 2; i < x; i++) {
 			if (x % i == 0) {
 				isSosu = false;
