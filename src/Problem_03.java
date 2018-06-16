@@ -2,10 +2,10 @@ public class Problem_03 {
 	public void solution() {
 		long x = 600851475143L;
 	
-		/* ¸¶Áö¸· ¼ö°¡ ¼Ò¼ö°¡ ¾Æ´Ñ °æ¿ì ºÐÇØ ÀÛ¾÷À» ¹Ýº¹. ex) 1029 */
+		/* ë§ˆì§€ë§‰ ìˆ˜ê°€ ì†Œìˆ˜ê°€ ì•„ë‹Œ ê²½ìš° ë¶„í•´ ìž‘ì—…ì„ ë°˜ë³µ. ex) 1029 */
 		while(!isSosu(x)) {
 			for (long i = 1; i < x; i++) {
-				/* i°¡ ¼Ò¼öÀÌ¸ç ÇØ´ç ¼ýÀÚ¿Í ³ª´² ¶³¾îÁö´Â °æ¿ì ³ª´«°ªÀ» ´Ù½Ã ÀúÀå */
+				/* iê°€ ì†Œìˆ˜ì´ë©° í•´ë‹¹ ìˆ«ìžì™€ ë‚˜ëˆ  ë–¨ì–´ì§€ëŠ” ê²½ìš° ë‚˜ëˆˆê°’ì„ ë‹¤ì‹œ ì €ìž¥ */
 				if (isSosu(i) && x % i == 0) {
 					x /= i;
 					System.out.println(i);
@@ -16,7 +16,7 @@ public class Problem_03 {
 		System.out.println("maximum value is " + x);
 	}
 
-	/* ¼Ò¼öÀÎ°æ¿ì true¸¦ ¸®ÅÏ */
+	/* ì†Œìˆ˜ì¸ê²½ìš° trueë¥¼ ë¦¬í„´ */
 	private boolean isSosu(long x) {
 		boolean isSosu = true;
 	
