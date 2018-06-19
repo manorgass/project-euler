@@ -5,7 +5,7 @@ public class DoIt {
 		// TODO Auto-generated method stub
 		long startTime, endTime, time;
 		
-		Problem_04 problem = new Problem_04();
+		Problem_05 problem = new Problem_05();
 		
 		startTime = System.nanoTime();
 		problem.solution();
