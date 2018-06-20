@@ -19,9 +19,11 @@ public class Problem_04 {
 					}
 				}
 				arg2--;
+				if (arg2 < 100)
+					break;
 			}
 			arg1--;
-			if (arg1 == 0)
+			if (arg1 == 0 && arg1 < 100)
 				break;
 		}
 	}
