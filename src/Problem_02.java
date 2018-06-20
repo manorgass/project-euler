@@ -7,10 +7,10 @@ public class Problem_02 {
 
 		while (true) {
 			fiboIdx_03 = fiboIdx_01 + fiboIdx_02;
-			/* 4¹é¸¸ ÀÌ»óÀÏ °æ¿ì ·çÇÁ Å»Ãâ */
+			/* 4ë°±ë§Œ ì´ìƒì¼ ê²½ìš° ë£¨í”„ íƒˆì¶œ */
 			if (fiboIdx_03 > 4000000)
 				break;
-			/* Â¦¼öÀÎ °æ¿ì¿¡¸¸ sum¿¡ ´õÇØÁÜ */
+			/* ì§ìˆ˜ì¸ ê²½ìš°ì—ë§Œ sumì— ë”í•´ì¤Œ */
 			if (fiboIdx_03 % 2 == 0)
 				sum += fiboIdx_03;
 			fiboIdx_01 = fiboIdx_02;
